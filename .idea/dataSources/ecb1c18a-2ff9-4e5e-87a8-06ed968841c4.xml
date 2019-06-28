@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project_test@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="project_test">
+      <ObjectId>1449326</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2019-06-28.16:57:44.932</IntrospectionTimestamp>
+      <IntrospectionStateNumber>805311</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12123</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="employe_id_seq">
+      <ObjectId>1449327</ObjectId>
+      <StateNumber>805308</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="project_id_seq">
+      <ObjectId>1449346</ObjectId>
+      <StateNumber>805310</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="role_id_seq">
+      <ObjectId>1449338</ObjectId>
+      <StateNumber>805309</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="12" parent="3" name="employe">
+      <ObjectId>1449329</ObjectId>
+      <StateNumber>805311</StateNumber>
+    </table>
+    <table id="13" parent="3" name="project">
+      <ObjectId>1449348</ObjectId>
+      <StateNumber>805311</StateNumber>
+    </table>
+    <table id="14" parent="3" name="role">
+      <ObjectId>1449340</ObjectId>
+      <StateNumber>805311</StateNumber>
+    </table>
+    <table id="15" parent="3" name="user_to_role_to_project">
+      <ObjectId>1449354</ObjectId>
+      <StateNumber>805311</StateNumber>
+    </table>
+    <column id="16" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805308</StateNumber>
+      <SequenceName>employe_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;employe_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="17" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805308</StateNumber>
+    </column>
+    <column id="18" parent="12" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805308</StateNumber>
+    </column>
+    <column id="19" parent="12" name="middlename">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805308</StateNumber>
+    </column>
+    <index id="20" parent="12" name="employe_pkey">
+      <ObjectId>1449336</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="12" name="employe_pkey">
+      <ObjectId>1449337</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>employe_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805310</StateNumber>
+      <SequenceName>project_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;project_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="23" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805310</StateNumber>
+    </column>
+    <index id="24" parent="13" name="project_pkey">
+      <ObjectId>1449352</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="13" name="project_pkey">
+      <ObjectId>1449353</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>project_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805309</StateNumber>
+      <SequenceName>role_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="27" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805309</StateNumber>
+    </column>
+    <index id="28" parent="14" name="role_pkey">
+      <ObjectId>1449344</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="14" name="role_pkey">
+      <ObjectId>1449345</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="15" name="employe_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805311</StateNumber>
+    </column>
+    <column id="31" parent="15" name="project_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805311</StateNumber>
+    </column>
+    <column id="32" parent="15" name="role_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805311</StateNumber>
+    </column>
+    <foreign-key id="33" parent="15" name="user_to_role_to_project_employe_id_fkey">
+      <ObjectId>1449357</ObjectId>
+      <ColNames>employe_id</ColNames>
+      <RefTableName>employe</RefTableName>
+      <RefKeyName>employe_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="34" parent="15" name="user_to_role_to_project_project_id_fkey">
+      <ObjectId>1449362</ObjectId>
+      <ColNames>project_id</ColNames>
+      <RefTableName>project</RefTableName>
+      <RefKeyName>project_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="35" parent="15" name="user_to_role_to_project_role_id_fkey">
+      <ObjectId>1449367</ObjectId>
+      <ColNames>role_id</ColNames>
+      <RefTableName>role</RefTableName>
+      <RefKeyName>role_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
