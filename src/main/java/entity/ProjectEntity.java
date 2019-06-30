@@ -7,7 +7,7 @@ import java.util.List;
  * Created by istvolov on 28.06.19.
  */
 @Entity
-@Table(name = "project", schema = "public", catalog = "project_test")
+@Table(name = "project", schema = "public", catalog = "hibernate_example")
 public class ProjectEntity {
 
     @Id

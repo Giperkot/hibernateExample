@@ -8,7 +8,7 @@ import java.util.List;
  * Created by istvolov on 28.06.19.
  */
 @Entity
-@Table(name = "employe", schema = "public", catalog = "project_test")
+@Table(name = "employe", schema = "public", catalog = "hibernate_example")
 public class EmployeEntity {
 
     @Id
@@ -33,6 +33,8 @@ public class EmployeEntity {
             inverseJoinColumns = @JoinColumn(name = "project_id"))
     private List<ProjectEntity> projectEntityList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "employeEntity")
+    private List<UserToRoleToProjectEntity> userToRoleToProjectEntity;
 
     public long getId() {
         return id;

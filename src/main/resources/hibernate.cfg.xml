@@ -6,17 +6,17 @@
   <session-factory>
 
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <property name="connection.url">jdbc:postgresql://localhost:5432/project_test</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_example</property>
 
-    <property name="connection.username">unit_dev</property>
-    <property name="connection.password">unit_dev</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">1</property>
     <property name="show_sql">true</property>
 
 
     <mapping class="entity.EmployeEntity"/>
     <mapping class="entity.ProjectEntity"/>
     <mapping class="entity.RoleEntity"/>
-    <!--<mapping class="entity.UserToRoleToProjectEntity"/>-->
+    <mapping class="entity.UserToRoleToProjectEntity"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by istvolov on 28.06.19.
  */
 @Entity
-@Table(name = "role", schema = "public", catalog = "project_test")
+@Table(name = "role", schema = "public", catalog = "hibernate_example")
 public class RoleEntity {
 
     @Id
